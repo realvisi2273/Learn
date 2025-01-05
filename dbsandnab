@@ -87,5 +87,5 @@ _G.SharkAnchor_Settings = {
 _G.GunSettings = {
     ['Kabucha'] = true,
     ['SerpentBow'] = true,
-    ['SoulGuitar'] = true
+    ['SoulGuitar'] = false
 }
