@@ -78,25 +78,33 @@ while true do
     for i, v in pairs(u) do 
         local rarity = SortRarity[v["Rarity"]]  -- Lấy tên độ hiếm từ bảng SortRarity
         
+        -- Đảm bảo bảng tồn tại trước khi thêm dữ liệu
         if v["Type"] == "Sword" then
+            itemTypes.Sword[rarity] = itemTypes.Sword[rarity] or {} -- Tạo bảng nếu chưa tồn tại
             itemTypes.Sword[rarity][#itemTypes.Sword[rarity] + 1] = {Name = v["Name"]}
         
         elseif v["Type"] == "Blox Fruit" then
+            itemTypes.Fruit[rarity] = itemTypes.Fruit[rarity] or {}
             itemTypes.Fruit[rarity][#itemTypes.Fruit[rarity] + 1] = {Name = v["Name"]}
         
         elseif v["Type"] == "Material" then
+            itemTypes.Material[rarity] = itemTypes.Material[rarity] or {}
             itemTypes.Material[rarity][#itemTypes.Material[rarity] + 1] = {Name = v["Name"], Count = v["Count"]}
         
         elseif v["Type"] == "Gun" then
+            itemTypes.Gun[rarity] = itemTypes.Gun[rarity] or {}
             itemTypes.Gun[rarity][#itemTypes.Gun[rarity] + 1] = {Name = v["Name"]}
         
         elseif v["Type"] == "Wear" then
+            itemTypes.Wear[rarity] = itemTypes.Wear[rarity] or {}
             itemTypes.Wear[rarity][#itemTypes.Wear[rarity] + 1] = {Name = v["Name"]}
         end
     end
     
+    
     for i, v in pairs(melees) do
         if Remote:InvokeServer("Buy" .. string.gsub(v, " ", ""), true) == 1 then
+            meleedata = meleedata or {}
             meleedata[#meleedata + 1] = v
         end
     end
