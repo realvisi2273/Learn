@@ -1,12 +1,149 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+repeat task.wait(3) until game:IsLoaded()
+repeat task.wait() until game.Players
+repeat task.wait() until game.Players.LocalPlayer
+repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
 
-]]--
+print("start script")
 
-repeat task.wait(8 -5 );until game:IsLoaded() repeat task.wait();until game.Players repeat task.wait();until game.Players.LocalPlayer repeat task.wait();until game.Players.LocalPlayer:FindFirstChild("PlayerGui") repeat task.wait();until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main") print("start script");local v0=game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_");local v1=game.Players.LocalPlayer;local v2={"Death Step","Sharkman Karate","Superhuman","Dragon Talon","Electric Claw","Godhuman","Sanguine Art"};local v3={[1]="Common",[879 -(282 + 595) ]="Uncommon",[1640 -(1523 + 114) ]="Rare",[4 + 0 ]="Legendary",[6 -1 ]="Mythical"};local v4={Sword={Common={},Uncommon={},Rare={},Legendary={},Mythical={}},Fruit={Common={},Uncommon={},Rare={},Legendary={},Mythical={}},Gun={Common={},Uncommon={},Rare={},Legendary={},Mythical={}},Wear={Common={},Uncommon={},Rare={},Legendary={},Mythical={}},Material={Common={},Uncommon={},Rare={},Legendary={},Mythical={}}};local v5={Status=""};while true do print("working");local v6=v0:InvokeServer("getInventory");local v7=" V1";local v8={};local v9={};local v10={};local v11={};local v12={};local v13={};if v1.Character then if v1.Character:FindFirstChild("RaceTransformed") then v7=" V4";elseif (v0:InvokeServer("Wenlocktoad","1")== -(1067 -(68 + 997))) then v7=" V3";elseif (v0:InvokeServer("Alchemist","1")== -(1272 -(226 + 1044))) then v7=" V2";end end local v14={PlayerName=v1.Name,Level=tostring(v1.Data.Level.Value):reverse():gsub("%d%d%d","%1,"):reverse():gsub("^,",""),Beli=tostring(v1.Data.Beli.Value):reverse():gsub("%d%d%d","%1,"):reverse():gsub("^,",""),Frag=tostring(v1.Data.Fragments.Value):reverse():gsub("%d%d%d","%1,"):reverse():gsub("^,",""),DevilFruit=tostring(v1.Data.DevilFruit.Value),BountyHonor=tostring(v1.leaderstats["Bounty/Honor"].Value):reverse():gsub("%d%d%d","%1,"):reverse():gsub("^,",""),Race=v1.Data.Race.Value   .. v7 ,Melee=v8,Sword=v4.Sword,Fruit=v4.Fruit,Gun=v4.Gun,Wear=v4.Wear,Material=v4.Material,Status=v5.Status};for v23,v24 in pairs(v6) do local v25=0 -0 ;local v26;while true do if (v25==0) then v26=v3[v24['Rarity']];if (v24['Type']=="Sword") then table.insert(v4.Sword[v26],{Name=v24['Name']});elseif (v24['Type']=="Blox Fruit") then table.insert(v4.Fruit[v26],{Name=v24['Name']});elseif (v24['Type']=="Material") then table.insert(v4.Material[v26],{Name=v24['Name'],Count=v24['Count']});elseif (v24['Type']=="Gun") then table.insert(v4.Gun[v26],{Name=v24['Name']});elseif (v24['Type']=="Wear") then table.insert(v4.Wear[v26],{Name=v24['Name']});end break;end end end for v27,v28 in pairs(v2) do if (v0:InvokeServer("Buy"   .. string.gsub(v28," ","") ,true)==1) then table.insert(v8,v28);end end local v15=false;local v16=false;for v29,v30 in pairs(v8) do if (v30=="Sanguine Art") then v16=true;break;elseif (v30=="Godhuman") then v15=true;break;end end local v17=false;local v18=false;local v19=false;for v31,v32 in pairs(v4.Material.Mythical) do if (v32.Name=="Mirror Fractal") then v19=true;break;end end for v33,v34 in pairs(v4.Wear.Legendary) do if (v34.Name=="Valkyrie Helm") then v18=true;break;end end current_level=v1.Data.Level.Value;current_Beli=v1.Data.Beli.Value;if ((current_level>=(2717 -(32 + 85))) and (current_Beli>500000)) then if (v19 and v18 and v15) then v5.Status="Gears";elseif (v16 and v15) then v5.Status="Sanguine Art";elseif v15 then v5.Status="Godhuman";end end local v22=game:GetService("HttpService"):JSONEncode(v14);writefile(v1.Name   .. "123"   .. ".json" ,v22);print("finished");wait(30);end
+local Remote = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_")
+local plr = game.Players.LocalPlayer
+local melees = {
+    "Death Step",
+    "Sharkman Karate",
+    "Superhuman",
+    "Dragon Talon",
+    "Electric Claw",
+    "Godhuman",
+    "Sanguine Art"
+}
+local SortRarity = {
+    [1] = "Common",
+    [2] = "Uncommon",
+    [3] = "Rare",
+    [4] = "Legendary",
+    [5] = "Mythical"
+}
+
+local itemTypes = {
+    Sword = {Common = {}, Uncommon = {}, Rare = {}, Legendary = {}, Mythical = {}}, 
+    Fruit = {Common = {}, Uncommon = {}, Rare = {}, Legendary = {}, Mythical = {}},
+    Gun = {Common = {}, Uncommon = {}, Rare = {}, Legendary = {}, Mythical = {}},
+    Wear = {Common = {}, Uncommon = {}, Rare = {}, Legendary = {}, Mythical = {}},
+    Material = {Common = {}, Uncommon = {}, Rare = {}, Legendary = {}, Mythical = {}}
+}
+
+local statusAccount = {
+    Status = ""
+}
+
+while true do
+    print("working")
+    local u = Remote:InvokeServer("getInventory")
+    local Race = " V1"
+    local meleedata = {}
+    local sworddata = {}
+    local fruitdata = {}
+    local Gundata = {}
+    local weardata = {}
+    local materialdata = {}
+
+    if plr.Character then
+        if plr.Character:FindFirstChild("RaceTransformed") then
+            Race = " V4"
+        elseif Remote:InvokeServer("Wenlocktoad", "1") == -2 then
+            Race = " V3"
+        elseif Remote:InvokeServer("Alchemist", "1") == -2 then
+            Race = " V2"
+        end
+    end
+
+    local data = {
+        PlayerName = plr.Name,
+        Level = tostring(plr.Data.Level.Value):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", ""),
+        Beli = tostring(plr.Data.Beli.Value):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", ""),
+        Frag = tostring(plr.Data.Fragments.Value):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", ""),
+        DevilFruit = tostring(plr.Data.DevilFruit.Value),
+        BountyHonor = tostring(plr.leaderstats["Bounty/Honor"].Value):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", ""),
+        Race = plr.Data.Race.Value .. Race,
+        Melee = meleedata,
+        Sword = itemTypes.Sword,
+        Fruit = itemTypes.Fruit,
+        Gun = itemTypes.Gun,
+        Wear = itemTypes.Wear,
+        Material = itemTypes.Material,
+        Status = statusAccount.Status
+    }
+
+    for i, v in pairs(u) do
+        local rarity = SortRarity[v["Rarity"]]  -- Lấy tên độ hiếm từ bảng SortRarity
+        if v["Type"] == "Sword" then
+            table.insert(itemTypes.Sword[rarity], {Name = v["Name"]})
+        elseif v["Type"] == "Blox Fruit" then
+            table.insert(itemTypes.Fruit[rarity], {Name = v["Name"]})
+        elseif v["Type"] == "Material" then
+            table.insert(itemTypes.Material[rarity], {Name = v["Name"], Count = v["Count"]})
+        elseif v["Type"] == "Gun" then
+            table.insert(itemTypes.Gun[rarity], {Name = v["Name"]})
+        elseif v["Type"] == "Wear" then
+            table.insert(itemTypes.Wear[rarity], {Name = v["Name"]})
+        end
+    end
+
+
+    for i, v in pairs(melees) do
+        if Remote:InvokeServer("Buy" .. string.gsub(v, " ", ""), true) == 1 then
+            table.insert(meleedata, v)
+        end
+    end
+
+    -- Kiểm tra xem "Godhuman" có trong meleedata không
+    local godhumanExists = false
+    local sanguineArtExists = false
+    for _, melee in pairs(meleedata) do
+        if melee == "Sanguine Art" then
+            sanguineArtExists = true
+            break
+        elseif melee == "Godhuman" then
+            godhumanExists = true
+            break
+        end
+    end
+
+    local isEnoughMaterial = false
+    local isHaveValkyrieHelm = false
+    local isHaveMirrorFractal = false
+    for _, item in pairs(itemTypes.Material.Mythical) do
+        if item.Name == "Mirror Fractal" then
+            isHaveMirrorFractal = true
+            break
+        end
+    end
+    for _, item in pairs(itemTypes.Wear.Legendary) do
+        if item.Name == "Valkyrie Helm" then
+            isHaveValkyrieHelm = true
+            break
+        end
+    end
+    
+    current_level = plr.Data.Level.Value
+    current_Beli = plr.Data.Beli.Value
+
+    if current_level >= 2600 and current_Beli > 500000 then
+        if isHaveMirrorFractal and isHaveValkyrieHelm and godhumanExists then
+            statusAccount.Status = "Gears"
+        elseif sanguineArtExists and godhumanExists then
+            statusAccount.Status = "Sanguine Art"
+        elseif godhumanExists then
+            statusAccount.Status = "Godhuman"
+        end
+    end
+    
+    -- Ghi dữ liệu vào tệp JSON
+    local jsonData = game:GetService("HttpService"):JSONEncode(data)
+    writefile(plr.Name .. "123" .. ".json", jsonData)
+
+    print("finished")
+
+    wait(30)
+end
