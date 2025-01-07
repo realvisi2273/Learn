@@ -115,8 +115,8 @@ while true do
                 local index_material = find_index(itemTypes.Material[rarity], v["Name"])
                 if index_material then
                     -- Cập nhật số lượng nếu đã tồn tại
-                    print(itemTypes.Material[rarity][index])
-                    itemTypes.Material[rarity][index].Count = itemTypes.Material[rarity][index].Count + v["Count"]
+                    print(itemTypes.Material[rarity][index_material])
+                    itemTypes.Material[rarity][index_material].Count = itemTypes.Material[rarity][index_material].Count + v["Count"]
                 else
                     -- Thêm mới nếu chưa tồn tại
                     itemTypes.Material[rarity][#itemTypes.Material[rarity] + 1] = {Name = v["Name"], Count = v["Count"]}
@@ -196,5 +196,5 @@ while true do
 
     print("finished")
 
-    wait(30)
+    wait(15)
 end
