@@ -1,3 +1,12 @@
+UserSettings():GetService("UserGameSettings").MasterVolume = 0
+UserSettings():GetService("UserGameSettings").SavedQualityLevel = 1
+workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
+game:GetService("Lighting").GlobalShadows = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
+settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
+settings().Rendering.GraphicsMode = 9
+
 getgenv().simple_settings = {
     ["MASTERY"] = { -- Settings related to leveling up weapon or skill mastery
         ["ACTIVE"] = true, -- Enable or disable mastery leveling (true = enabled, false = disabled)
@@ -17,7 +26,7 @@ getgenv().simple_settings = {
         ["CANVANDER"] = true,
         ["BUDDY-SWORD"] = true,
         ["CURSED-DUAL-KATANA"] = true,
-        ["SHARK-ANCHOR"] = true,
+        ["SHARK-ANCHOR"] = false,
 
         --GUN
         ["ACIDUM-RIFLE"] = true,
@@ -38,6 +47,6 @@ getgenv().simple_settings = {
         [6] = "Human-Human: Buddha",
     },
 
-    ["FPSCAP"] = 30, -- Limit the frame rate to optimize performance
+    ["FPSCAP"] = 20, -- Limit the frame rate to optimize performance
     ["LOWTEXTURE"] = true-- Reduce graphic quality for better performance
 }
