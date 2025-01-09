@@ -1,6 +1,16 @@
+UserSettings():GetService("UserGameSettings").MasterVolume = 0
+UserSettings():GetService("UserGameSettings").SavedQualityLevel = 1
+workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
+game:GetService("Lighting").GlobalShadows = false
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
+settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
+settings().Rendering.GraphicsMode = 9
+
+script_key = "" -- ONly Buyer Key 
 getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
 getgenv().Configs = {
-    ["Team"] = "Marines",
+    ["Team"] = "Pirates",
     ["Gun Farm"] = false, -- Disabled
     ["FPS Boost"] = {
         ["Enable"] = true,
@@ -10,14 +20,16 @@ getgenv().Configs = {
         ["Enable"] = false,
         ["When x2 Exp Expired"] = false
     },
-    ["Rainbow Haki"] = true,
+    ["Rainbow Haki"] = false,
+    ["Auto Evo Race"] = true,
     ["Hop Player Near"] = false,
     ["Skull Guitar"] = true,
     ["Find Fruit"] = false, -- Will find 1m+ fruit to unlock swan door to access third sea
-    ["Cursed Dual Katana"] = true,
+    ["Cursed Dual Katana"] = false,
     ["Switch Melee"] = true,
-    ["Eat Fruit"] = "Dragon Fruit", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit
-    ["Snipe Fruit"] = "Dragon Fruit", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit
-    ["Lock Fragment"] = 3000,
+    ["Eat Fruit"] = "Yeti Fruit", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit, ...
+    ["Snipe Fruit"] = "Dragon Fruit", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit, ...
+    ["Lock Fragment"] = 0,
     ["Buy Stuffs"] = true -- buso, geppo, soru, ken haki
 }
+repeat task.wait(2) pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/verudous/Xero-Hub/refs/heads/main/kaitun.lua"))() end) until getgenv().Check_Execute
