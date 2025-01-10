@@ -22,6 +22,8 @@ _G.MainSettings = {
             [9] = "T-Rex-T-Rex",
             [10] = "Spirit-Spirit",
             [11] = "Shadow-Shadow",
+            [12] = "Venom-Venom",
+            [13] = "Control-Control"
         }
     }
 _G.Fruits_Settings = {
