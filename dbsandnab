@@ -24,12 +24,18 @@ _G.MainSettings = {
             [11] = "Shadow-Shadow",
             [12] = "Venom-Venom",
             [13] = "Control-Control",
-            [14] = "Gas-Gas"
+            [14] = "Gas-Gas",
+            [15] = "Yeti-Yeti",
+            [16] = "Sound-Sound",
+            [17] = "Phoenix-Phoenix",
+            [18] = "Pain-Pain",
+            [19] = "Gravity-Gravity",
+            [20] = "Spider-Spider"
         }
     }
 _G.Fruits_Settings = {
-    ['Main_Fruits'] = {'Dough-Dough', 'Kitsune-Kitsune', 'Dragon-Dragon', 'Leopard-Leopard', 'T-Rex-T-Rex', 'Gas-Gas'},
-    ['Select_Fruits'] = {"T-Rex-T-Rex", "Mammoth-Mammoth", "Kitsune-Kitsune", "Gas-Gas", "Dough-Dough", "Venom-Venom", "Spirit-Spirit", "Dragon-Dragon", "Leopard-Leopard", "Magma-Magma", "Rumble-Rumble", "Blizzard-Blizzard"}
+    ['Main_Fruits'] = {'Yeti-Yeti', 'Dough-Dough', 'Kitsune-Kitsune', 'Dragon-Dragon', 'Leopard-Leopard', 'T-Rex-T-Rex', 'Gas-Gas'},
+    ['Select_Fruits'] = {"Yeti-Yeti", "T-Rex-T-Rex", "Mammoth-Mammoth", "Kitsune-Kitsune", "Gas-Gas", "Dough-Dough", "Venom-Venom", "Spirit-Spirit", "Dragon-Dragon", "Leopard-Leopard", "Magma-Magma", "Rumble-Rumble", "Blizzard-Blizzard"}
 }
 _G.Quests_Settings = { 
     ['Rainbow_Haki'] = true,
