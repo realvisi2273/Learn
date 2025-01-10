@@ -21,9 +21,9 @@ getgenv().Configs = {
         ["When x2 Exp Expired"] = false
     },
     ["Rainbow Haki"] = false,
-    ["Auto Evo Race"] = true,
+    ["Auto Evo Race"] = false,
     ["Hop Player Near"] = false,
-    ["Skull Guitar"] = true,
+    ["Skull Guitar"] = false,
     ["Find Fruit"] = false, -- Will find 1m+ fruit to unlock swan door to access third sea
     ["Cursed Dual Katana"] = false,
     ["Switch Melee"] = true,
