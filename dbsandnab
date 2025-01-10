@@ -11,14 +11,21 @@ _G.MainSettings = {
         ['AFKCheck'] = 100, 
         ["LockFragments"] = 50000, 
         ["LockFruitsRaid"] = { 
-            [1] = "Dough-Dough",
-            [2] = "Dragon-Dragon",
-            [3] = "Kitsune-Kitsune"
+            [1] = "Dragon-Dragon",
+            [2] = "Kitsune-Kitsune",
+            [3] = "Dough-Dough",
+            [4] = "Leopard-Leopard",
+            [5] = "Human-Human: Buddha",
+            [6] = "Blizzard-Blizzard",
+            [7] = "Rumble-Rumble",
+            [8] = "Mammoth-Mammoth",
+            [9] = "T-Rex-T-Rex",
+            [10] = "Spirit-Spirit"
         }
     }
 _G.Fruits_Settings = {
-    ['Main_Fruits'] = {'Dough-Dough', 'Kitsune-Kitsune', 'Dragon-Dragon'},
-    ['Select_Fruits'] = {"Rumble-Rumble", "Buddha-Buddha", 'Dough-Dough', 'Kitsune-Kitsune', 'Dragon-Dragon', 'T-Rex-T-Rex', 'Portal-Portal'}
+    ['Main_Fruits'] = {'Dough-Dough', 'Kitsune-Kitsune', 'Dragon-Dragon', 'Leopard-Leopard', 'T-Rex-T-Rex'},
+    ['Select_Fruits'] = = {"T-Rex-T-Rex", "Mammoth-Mammoth", "Kitsune-Kitsune", "Dough-Dough", "Shadow-Shadow", "Venom-Venom", "Control-Control", "Spirit-Spirit", "Dragon-Dragon", "Leopard-Leopard", "Magma-Magma", "Human-Human: Buddha", "Rumble-Rumble", "Blizzard-Blizzard"}
 }
 _G.Quests_Settings = { 
     ['Rainbow_Haki'] = true,
@@ -58,9 +65,25 @@ _G.FarmMastery_Settings = {
     ['DevilFruits'] = true,
     ['Select_Swords'] = {
         ['AutoSettings'] = true,
-        ['ManualSettings'] = { 
-            'Saber',
-            'Buddy Sword'
+        ["ManualSettings"] = { 
+            "Saber",
+            "Canvander",
+            "BuddySword",
+            "Dark Dagger",
+            "True Triple Katana",
+            "Cursed Dual Katana",
+            "Shizu",
+            "Wando",
+            "Saddi",
+            "Yama",
+            "Rengoku",
+            "Tushita",
+            "Hallow Scythe",
+            "Spikey Trident",
+            "Shark Anchor",
+            "Dark Dagger",
+            "Dragonheart",
+            "Fox Lamp"
         }
     }
 }
@@ -78,7 +101,7 @@ _G.SwordSettings = {
     ['TwinHooks'] = true,
     ['HallowScryte'] = true,
     ['TrueTripleKatana'] = true,
-    ['CursedDualKatana'] = true
+    ['CursedDualKatana'] = false
 }
 _G.SharkAnchor_Settings = {
     ['Enabled_Farm'] = false,
