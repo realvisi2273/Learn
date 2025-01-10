@@ -32,13 +32,13 @@ _G.Quests_Settings = {
 _G.Races_Settings = {
     ['Race'] = {
         ['EnabledEvo'] = true,
-        ["v2"] = fasle,
-        ["v3"] = fasle,
+        ["v2"] = true,
+        ["v3"] = true,
         ["Races_Lock"] = {
             ["Races"] = { 
                 ["Mink"] = true,
                 ["Human"] = true,
-                ["Fishman"] = true
+                ["Fishman"] = false
             },
             ["RerollsWhenFragments"] = 10000
         }
@@ -81,7 +81,7 @@ _G.SwordSettings = {
     ['CursedDualKatana'] = true
 }
 _G.SharkAnchor_Settings = {
-    ['Enabled_Farm'] = true,
+    ['Enabled_Farm'] = false,
     ['FarmAfterMoney'] = 2500000
 }
 _G.GunSettings = {
