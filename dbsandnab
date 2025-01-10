@@ -25,7 +25,7 @@ _G.MainSettings = {
     }
 _G.Fruits_Settings = {
     ['Main_Fruits'] = {'Dough-Dough', 'Kitsune-Kitsune', 'Dragon-Dragon', 'Leopard-Leopard', 'T-Rex-T-Rex'},
-    ['Select_Fruits'] = {"T-Rex-T-Rex", "Mammoth-Mammoth", "Kitsune-Kitsune", "Dough-Dough", "Shadow-Shadow", "Venom-Venom", "Control-Control", "Spirit-Spirit", "Dragon-Dragon", "Leopard-Leopard", "Magma-Magma", "Human-Human: Buddha", "Rumble-Rumble", "Blizzard-Blizzard"}
+    ['Select_Fruits'] = {"T-Rex-T-Rex", "Mammoth-Mammoth", "Kitsune-Kitsune", "Dough-Dough", "Shadow-Shadow", "Venom-Venom", "Control-Control", "Spirit-Spirit", "Dragon-Dragon", "Leopard-Leopard", "Magma-Magma", "Rumble-Rumble", "Blizzard-Blizzard"}
 }
 _G.Quests_Settings = { 
     ['Rainbow_Haki'] = true,
