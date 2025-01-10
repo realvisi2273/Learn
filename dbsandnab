@@ -20,7 +20,8 @@ _G.MainSettings = {
             [7] = "Rumble-Rumble",
             [8] = "Mammoth-Mammoth",
             [9] = "T-Rex-T-Rex",
-            [10] = "Spirit-Spirit"
+            [10] = "Spirit-Spirit",
+            [11] = "Shadow-Shadow",
         }
     }
 _G.Fruits_Settings = {
