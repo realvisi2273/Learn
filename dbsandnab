@@ -30,12 +30,13 @@ _G.MainSettings = {
             [17] = "Phoenix-Phoenix",
             [18] = "Pain-Pain",
             [19] = "Gravity-Gravity",
-            [20] = "Spider-Spider"
+            [20] = "Spider-Spider",
+            [21] = "Portal-Portal"
         }
     }
 _G.Fruits_Settings = {
-    ['Main_Fruits'] = {'Yeti-Yeti', 'Dough-Dough', 'Kitsune-Kitsune', 'Dragon-Dragon', 'Leopard-Leopard', 'T-Rex-T-Rex', 'Gas-Gas'},
-    ['Select_Fruits'] = {"Yeti-Yeti", "T-Rex-T-Rex", "Mammoth-Mammoth", "Kitsune-Kitsune", "Gas-Gas", "Dough-Dough", "Venom-Venom", "Spirit-Spirit", "Dragon-Dragon", "Leopard-Leopard", "Magma-Magma", "Rumble-Rumble", "Blizzard-Blizzard"}
+    ['Main_Fruits'] = {'Yeti-Yeti', 'Kitsune-Kitsune', 'Dragon-Dragon', 'Leopard-Leopard', 'T-Rex-T-Rex', 'Gas-Gas'},
+    ['Select_Fruits'] = {"Magma-Magma"}
 }
 _G.Quests_Settings = { 
     ['Rainbow_Haki'] = true,
