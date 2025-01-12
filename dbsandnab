@@ -71,7 +71,7 @@ _G.Settings_Melee = {
 }
 _G.FarmMastery_Settings = {
     ['Melee'] = true,
-    ['Sword'] = true,
+    ['Sword'] = false,
     ['DevilFruits'] = true,
     ['Select_Swords'] = {
         ['AutoSettings'] = true,
