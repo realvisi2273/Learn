@@ -8,7 +8,7 @@ settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
 settings().Rendering.GraphicsMode = 9
 
 script_key = "" -- ONly Buyer Key 
-getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
+getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
 getgenv().Configs = {
     ["Team"] = "Pirates",
     ["Gun Farm"] = false, -- Disabled
